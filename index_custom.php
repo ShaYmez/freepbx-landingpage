@@ -1,15 +1,15 @@
 <?php
 /**
- * FreeSTAR Everywhere Landing Page - Branding Configuration
+ * FreeSTAR Branding Configuration
  * Customize these variables to match your brand
  */
 
 // Brand Settings
-$brand_name = "FreeSTAR Everywhere";
-$brand_tagline = "Your Trusted Public VoIP Server Solution";
+$brand_name = "BRAND";
+$brand_tagline = "TAGLINE";
 $brand_logo = ""; // Optional: Path to logo image (e.g., "images/logo.png")
-$brand_url = "https://freestareverywhere.com"; // URL for logo/brand name link
-$server_name = "PBX01 United Kingdom"; // Server name for this landing page
+$brand_url = "https://freestar.network"; // URL for logo/brand name link
+$server_name = "PBX-01 Global"; // Server name for this landing page
 
 // Color Settings (hex colors)
 $primary_color = "#667eea";
@@ -18,17 +18,17 @@ $accent_color_1 = "#f093fb";
 $accent_color_2 = "#f5576c";
 
 // Content Settings
-$welcome_heading = "Welcome to FreeSTAR Everywhere";
-$welcome_text = "Experience crystal-clear voice communication with our reliable and feature-rich VoIP services. Join thousands of users who trust FreeSTAR Everywhere for their communication needs. Whether you're connecting with friends, family, or colleagues, we've got you covered.";
+$welcome_heading = "Welcome to FreeSTAR";
+$welcome_text = "Connecting you to the World! Through Ham Radio!";
 
 // Button Settings
 $button_1_text = "Sign up";
-$button_1_url = "https://support.freestar.network";
-$button_2_text = "Phonebook";
-$button_2_url = "https://pbx01.freestar.network/apps/phonebook/phonebook.php";
+$button_1_url = "";
+$button_2_text = "Button1";
+$button_2_url = "";
 
 // Footer Settings
-$footer_text = "Empowering communication, one call at a time.";
+$footer_text = "Freedom to Connect";
 ?>
 <!DOCTYPE html>
 <html lang="en">
