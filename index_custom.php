@@ -1,5 +1,6 @@
 <?php
 /**
+ * Page version v1.00
  * FreeSTAR Branding Configuration
  * Customize these variables to match your brand
  */
