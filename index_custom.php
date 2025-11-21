@@ -309,6 +309,40 @@
                 opacity: 1;
             }
         }
+
+        /* Ripple Effect */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.6);
+            pointer-events: none;
+            animation: rippleEffect 0.6s ease-out;
+        }
+
+        @keyframes rippleEffect {
+            to {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        /* Keyboard Navigation */
+        .keyboard-nav *:focus {
+            outline: 2px solid #667eea;
+            outline-offset: 3px;
+        }
+
+        /* Animation classes for feature cards */
+        .feature-card-animate {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.6s ease;
+        }
+
+        .feature-card-hidden {
+            opacity: 0;
+            transform: translateY(20px);
+        }
     </style>
 </head>
 <body>
@@ -412,16 +446,23 @@
                 });
             });
 
-            // Add parallax effect to header on scroll
+            // Add parallax effect to header on scroll with throttling
+            let ticking = false;
             window.addEventListener('scroll', function() {
-                const header = document.querySelector('.header');
-                const scrolled = window.pageYOffset;
-                if (header) {
-                    header.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        const header = document.querySelector('.header');
+                        const scrolled = window.pageYOffset;
+                        if (header) {
+                            header.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
                 }
             });
 
-            // Animate feature cards on scroll
+            // Animate feature cards on scroll using CSS classes
             const observerOptions = {
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
@@ -430,12 +471,10 @@
             const observer = new IntersectionObserver(function(entries) {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.style.opacity = '0';
-                        entry.target.style.transform = 'translateY(20px)';
+                        entry.target.classList.add('feature-card-hidden');
                         setTimeout(() => {
-                            entry.target.style.transition = 'all 0.6s ease';
-                            entry.target.style.opacity = '1';
-                            entry.target.style.transform = 'translateY(0)';
+                            entry.target.classList.remove('feature-card-hidden');
+                            entry.target.classList.add('feature-card-animate');
                         }, 100);
                         observer.unobserve(entry.target);
                     }
