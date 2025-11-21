@@ -9,6 +9,7 @@ $brand_name = "FreeSTAR Everywhere";
 $brand_tagline = "Your Trusted Public VoIP Server Solution";
 $brand_logo = ""; // Optional: Path to logo image (e.g., "images/logo.png")
 $brand_url = "https://freestareverywhere.com"; // URL for logo/brand name link
+$server_name = "PBX01 United Kingdom"; // Server name for this landing page
 
 // Color Settings (hex colors)
 $primary_color = "#667eea";
@@ -176,6 +177,24 @@ $footer_text = "Empowering communication, one call at a time.";
 
         .content {
             padding: 50px 40px;
+        }
+
+        .server-name {
+            text-align: center;
+            padding: 30px 40px 20px;
+            background: linear-gradient(to bottom, rgba(102, 126, 234, 0.1), transparent);
+        }
+
+        .server-name h2 {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        body.light-theme .server-name h2 {
+            color: var(--secondary-color);
         }
 
         .description {
@@ -347,6 +366,14 @@ $footer_text = "Empowering communication, one call at a time.";
                 font-size: 1.1em;
             }
 
+            .server-name {
+                padding: 20px 20px 15px;
+            }
+
+            .server-name h2 {
+                font-size: 1.4em;
+            }
+
             .content {
                 padding: 30px 20px;
             }
@@ -384,6 +411,10 @@ $footer_text = "Empowering communication, one call at a time.";
 
             .header p {
                 font-size: 1em;
+            }
+
+            .server-name h2 {
+                font-size: 1.2em;
             }
 
             .feature-card {
@@ -460,15 +491,6 @@ $footer_text = "Empowering communication, one call at a time.";
             -webkit-user-select: none;
             user-select: none;
             touch-action: manipulation;
-        }
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5em;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .theme-toggle:hover {
@@ -564,6 +586,10 @@ $footer_text = "Empowering communication, one call at a time.";
                 <h1><?php echo htmlspecialchars($brand_name); ?></h1>
             </a>
             <p><?php echo htmlspecialchars($brand_tagline); ?></p>
+        </div>
+
+        <div class="server-name">
+            <h2><?php echo htmlspecialchars($server_name); ?></h2>
         </div>
 
         <div class="content">
