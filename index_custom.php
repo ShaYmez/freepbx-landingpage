@@ -632,6 +632,11 @@ $footer_text = "Freedom to Connect";
             </div>
         </div>
 
+        
+ /**
+ * Please consider donating to the FreeSTAR Network if you wish to remove this footer... contact email: shane@freestar.network
+ * Retain copyright on footer to use this landing page v1.00 Aka ShaYmez - M0VUB All right reserved.
+ */
         <div class="footer">
             <p>&copy; <?php echo date('Y'); ?> <a href="https://freestar.network" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none; border-bottom: 1px dotted;">FreeSTAR Network</a>. All rights reserved.</p>
             <p><?php echo htmlspecialchars($footer_text); ?></p>
