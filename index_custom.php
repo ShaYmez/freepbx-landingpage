@@ -9,7 +9,7 @@ $brand_name = "BRAND";
 $brand_tagline = "TAGLINE";
 $brand_logo = ""; // Optional: Path to logo image (e.g., "images/logo.png")
 $brand_url = "https://freestar.network"; // URL for logo/brand name link
-$server_name = "PBX-01 Global"; // Server name for this landing page
+$server_name = "SERVER1"; // Server name for this landing page
 
 // Color Settings (hex colors)
 $primary_color = "#667eea";
